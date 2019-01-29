@@ -1400,7 +1400,7 @@ dependencies: [
  { src: 'https://cdn.jsdelivr.net/gh/ertwro/githubppt@3861b9f1d832431bf3fda4e85daaa8c158efbcb9/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
  { src: 'https://cdn.jsdelivr.net/gh/ertwro/githubppt@3861b9f1d832431bf3fda4e85daaa8c158efbcb9/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
  { src: 'https://cdn.jsdelivr.net/gh/ertwro/githubppt@3861b9f1d832431bf3fda4e85daaa8c158efbcb9/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: 'https://cdn.jsdelivr.net/gh/ertwro/githubppt@3861b9f1d832431bf3fda4e85daaa8c158efbcb9/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
  { src: 'https://cdn.jsdelivr.net/gh/ertwro/githubppt@3861b9f1d832431bf3fda4e85daaa8c158efbcb9/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
  { src: 'https://cdn.jsdelivr.net/gh/ertwro/githubppt@3861b9f1d832431bf3fda4e85daaa8c158efbcb9/reveal.js/plugin/menu/menu.js'}]
 ,defaultTiming: 120, hideAddressBar: true, menu: {side: 'left'},});
