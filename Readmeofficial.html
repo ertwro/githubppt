@@ -4,12 +4,14 @@
 <meta charset="utf-8"/>
 <title>Introduction to Org-Reveal</title>
 <meta name="author" content="(Yujie Wen)"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <style type="text/css">
 .underline { text-decoration: underline; }
 </style>
-<link rel="stylesheet" href="https://raw.githubusercontent.com/ertwro/githubppt/gh-pages/reveal.js/css/reveal.css"/>
+<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
 
-<link rel="stylesheet" href="https://raw.githubusercontent.com/ertwro/githubppt/gh-pages/reveal.js/css/theme/moon.css" id="theme"/>
+<link rel="stylesheet" href="./reveal.js/css/theme/moon.css" id="theme"/>
 
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
@@ -18,7 +20,7 @@
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'https://raw.githubusercontent.com/ertwro/githubppt/gh-pages/reveal.js/css/print/pdf.css';
+        link.href = './reveal.js/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
     }
 </script>
@@ -1364,8 +1366,8 @@ Blablablablabla
 </div>
 </div>
 <p> Created by yjwen. </p>
-<script src="https://raw.githubusercontent.com/ertwro/githubppt/gh-pages/reveal.js/lib/js/head.min.js"></script>
-<script src="https://raw.githubusercontent.com/ertwro/githubppt/gh-pages/reveal.js/js/reveal.js"></script>
+<script src="./reveal.js/lib/js/head.min.js"></script>
+<script src="./reveal.js/js/reveal.js"></script>
 
 <script>
 // Full list of configuration options available here:
@@ -1397,12 +1399,12 @@ multiplex: {
 
 // Optional libraries used to extend on reveal.js
 dependencies: [
- { src: 'https://raw.githubusercontent.com/ertwro/githubppt/gh-pages/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
- { src: 'https://raw.githubusercontent.com/ertwro/githubppt/gh-pages/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: 'https://raw.githubusercontent.com/ertwro/githubppt/gh-pages/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
- { src: 'https://raw.githubusercontent.com/ertwro/githubppt/gh-pages/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
- { src: 'https://raw.githubusercontent.com/ertwro/githubppt/gh-pages/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
- { src: 'https://raw.githubusercontent.com/ertwro/githubppt/gh-pages/reveal.js/plugin/menu/menu.js'}]
+ { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/menu/menu.js'},]
 ,defaultTiming: 120, hideAddressBar: true, menu: {side: 'left'},});
 </script>
 </body>
