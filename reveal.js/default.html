@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Medicina Basada en la Conducta</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme" />
+
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <style>
+      /* --- CSS FINAL Y SIMPLIFICADO --- */
+
+      /* Base */
+      .reveal {
+        font-size: clamp(
+          16px,
+          2vw,
+          24px
+        ); /* Tamaño de fuente base más controlado */
+      }
+      .reveal .slides {
+        text-align: center; /* Centra todo por defecto */
+      }
+      .reveal section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 2vh 3vw; /* Padding dinámico */
+        height: 100%;
+        width: 100%;
+      }
+
+      /* Textos y Encabezados */
+      .reveal h1,
+      .reveal h2,
+      .reveal h3 {
+        width: 95%;
+        max-width: 1200px; /* Un límite de sanidad para que no sean demasiado anchos */
+        margin-left: auto;
+        margin-right: auto;
+        overflow-wrap: break-word;
+      }
+      .reveal h1 {
+        font-size: clamp(2.5em, 6vw, 4em);
+      }
+      .reveal h2 {
+        font-size: clamp(2em, 5vw, 3em);
+      }
+      .reveal p {
+        width: 95%;
+        max-width: 900px; /* Límite para legibilidad del párrafo */
+        margin: 1em auto;
+        font-size: clamp(1em, 2.5vw, 1.4em);
+        line-height: 1.5;
+      }
+
+      /* --- SOLUCIÓN PARA WORDCLOUD --- */
+      pre[wordcloud] {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        width: 95vw; /* Usa casi todo el ancho de la pantalla */
+        min-height: 60vh;
+        margin: auto;
+        text-align: center; /* Añadido para forzar centrado de texto */
+        overflow: visible !important;
+        border: none;
+      }
+
+      /* --- SOLUCIÓN PARA DIAGRAMA Y CÓDIGO LADO A LADO --- */
+      .reveal section div[style*="display: flex"] {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2em;
+        width: 98%;
+        max-width: 1800px; /* Límite máximo muy generoso */
+        justify-content: center;
+        align-items: center; /* Centra verticalmente los elementos */
+        margin: 0 auto;
+      }
+      .reveal section div[style*="flex: 1"] {
+        flex: 1 1 400px; /* Base para que las columnas se reorganicen */
+        min-width: 350px;
+      }
+
+      /* Otros elementos (código, gráficos, etc.) */
+      .reveal pre:not([wordcloud]) {
+        width: 95%;
+        max-width: 1200px;
+        margin: 1em auto;
+        font-size: clamp(0.7em, 1.5vw, 1em);
+      }
+      .bar-chart-container {
+        width: 95%;
+        max-width: 1000px;
+        height: 40vh;
+        margin: 1em auto;
+      }
+
+      /* Asegurar que SVG no se desborde */
+      .reveal svg {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-auto-animate>
+          <h1 data-id="title-mbc">Medicina Basada en la Conducta</h1>
+          <p class="fragment">
+            Un enfoque algorítmico para la práctica clínica del dia a dia
+          </p>
+        </section>
+        <section>
+          <pre
+            class="stretch"
+            wordcloud='{"weightFactor": 12, "fontFamily": "Fivo Sans Modern, sans-serif", "wait": 70, "shuffle": false, "drawOutOfBound": false}'
+          >
+30 Les Misérables
+20 Victor Hugo
+15 Jean Valjean
+15 Javert
+15 Fantine
+15 Cosette
+12 Éponine
+12 Marius
+12 Enjolras
+10 Thénardiers
+10 Gavroche
+10 Bishop Myriel
+10 Patron-Minette
+10 God
+8 ABC Café
+8 Paris
+8 Digne
+8 Elephant of the Bastille
+5 silverware
+5 Bagne of Toulon
+5 loaf of bread
+5 Rue Plumet
+5 revolution
+5 barricade
+4 sewers
+4 Fex urbis lex orbis
+          </pre>
+        </section>
+
+        <section data-auto-animate>
+          <h2>La Medicina es Algorítmica</h2>
+          <p data-id="quote-text">"Algorítmica en su mayor parte."</p>
+        </section>
+
+        <section data-auto-animate>
+          <h2>La Medicina es Algorítmica</h2>
+          <div
+            style="
+              display: flex;
+              align-items: flex-start;
+              justify-content: space-between;
+            "
+          >
+            <div style="flex: 1; padding-right: 2rem">
+              <p data-id="quote-text">
+                Algoritmos codificables, pero visualmente complejos
+              </p>
+            </div>
+            <div style="flex: 1">
+              <pre data-id="algo-code"><code class="hljs python" data-trim>
+def diagnostico_dolor_pecho(sintomas):
+  if sintoma_principal == "dolor opresivo":
+    if factores_riesgo_cv >= 2:
+      return "Sospecha Alta SCA -> ECG + Enzimas"
+    else:
+      return "Sospecha Media -> Considerar otras causas"
+  else:
+    return "Evaluar otras etiologías"</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section data-auto-animate>
+          <h2>La Medicina es Algorítmica</h2>
+          <div
+            style="
+              display: flex;
+              align-items: flex-start;
+              justify-content: space-between;
+            "
+          >
+            <div style="flex: 1; padding-right: 2rem">
+              <div
+                data-id="diagram"
+                style="margin: 1rem 0; width: 100%; overflow: visible"
+              >
+                <svg
+                  width="100%"
+                  height="220"
+                  viewBox="0 0 320 220"
+                  style="max-width: 100%"
+                >
+                  <!-- Decision tree diagram -->
+                  <rect
+                    x="120"
+                    y="10"
+                    width="80"
+                    height="30"
+                    fill="#4a90e2"
+                    stroke="#fff"
+                    stroke-width="2"
+                    rx="5"
+                  />
+                  <text
+                    x="160"
+                    y="30"
+                    text-anchor="middle"
+                    fill="white"
+                    font-size="12"
+                    font-weight="bold"
+                  >
+                    Dolor Pecho
+                  </text>
+
+                  <!-- Arrow down -->
+                  <line
+                    x1="160"
+                    y1="40"
+                    x2="160"
+                    y2="60"
+                    stroke="#fff"
+                    stroke-width="2"
+                    marker-end="url(#arrowhead)"
+                  />
+
+                  <!-- Decision diamond -->
+                  <polygon
+                    points="160,60 185,80 160,100 135,80"
+                    fill="#e74c3c"
+                    stroke="#fff"
+                    stroke-width="2"
+                  />
+                  <text
+                    x="160"
+                    y="85"
+                    text-anchor="middle"
+                    fill="white"
+                    font-size="11"
+                    font-weight="bold"
+                  >
+                    ¿Opresivo?
+                  </text>
+
+                  <!-- Left branch (No) -->
+                  <line
+                    x1="135"
+                    y1="80"
+                    x2="80"
+                    y2="120"
+                    stroke="#fff"
+                    stroke-width="2"
+                    marker-end="url(#arrowhead)"
+                  />
+                  <text
+                    x="100"
+                    y="95"
+                    fill="#fff"
+                    font-size="11"
+                    font-weight="bold"
+                  >
+                    No
+                  </text>
+                  <rect
+                    x="20"
+                    y="120"
+                    width="90"
+                    height="25"
+                    fill="#95a5a6"
+                    stroke="#fff"
+                    stroke-width="2"
+                    rx="3"
+                  />
+                  <text
+                    x="65"
+                    y="138"
+                    text-anchor="middle"
+                    fill="white"
+                    font-size="10"
+                  >
+                    Otras etiologías
+                  </text>
+
+                  <!-- Right branch (Yes) -->
+                  <line
+                    x1="185"
+                    y1="80"
+                    x2="230"
+                    y2="120"
+                    stroke="#fff"
+                    stroke-width="2"
+                    marker-end="url(#arrowhead)"
+                  />
+                  <text
+                    x="215"
+                    y="95"
+                    fill="#fff"
+                    font-size="11"
+                    font-weight="bold"
+                  >
+                    Sí
+                  </text>
+
+                  <!-- Second decision -->
+                  <polygon
+                    points="230,120 250,140 230,160 210,140"
+                    fill="#f39c12"
+                    stroke="#fff"
+                    stroke-width="2"
+                  />
+                  <text
+                    x="230"
+                    y="145"
+                    text-anchor="middle"
+                    fill="white"
+                    font-size="10"
+                    font-weight="bold"
+                  >
+                    ¿FR≥2?
+                  </text>
+
+                  <!-- Final outcomes -->
+                  <line
+                    x1="210"
+                    y1="140"
+                    x2="160"
+                    y2="175"
+                    stroke="#fff"
+                    stroke-width="2"
+                    marker-end="url(#arrowhead)"
+                  />
+                  <text
+                    x="180"
+                    y="155"
+                    fill="#fff"
+                    font-size="10"
+                    font-weight="bold"
+                  >
+                    No
+                  </text>
+                  <rect
+                    x="115"
+                    y="175"
+                    width="90"
+                    height="25"
+                    fill="#27ae60"
+                    stroke="#fff"
+                    stroke-width="2"
+                    rx="3"
+                  />
+                  <text
+                    x="160"
+                    y="193"
+                    text-anchor="middle"
+                    fill="white"
+                    font-size="10"
+                  >
+                    Sospecha Media
+                  </text>
+
+                  <line
+                    x1="250"
+                    y1="140"
+                    x2="280"
+                    y2="175"
+                    stroke="#fff"
+                    stroke-width="2"
+                    marker-end="url(#arrowhead)"
+                  />
+                  <text
+                    x="270"
+                    y="155"
+                    fill="#fff"
+                    font-size="10"
+                    font-weight="bold"
+                  >
+                    Sí
+                  </text>
+                  <rect
+                    x="235"
+                    y="175"
+                    width="80"
+                    height="25"
+                    fill="#e74c3c"
+                    stroke="#fff"
+                    stroke-width="2"
+                    rx="3"
+                  />
+                  <text
+                    x="275"
+                    y="193"
+                    text-anchor="middle"
+                    fill="white"
+                    font-size="10"
+                  >
+                    Sospecha Alta
+                  </text>
+
+                  <!-- Arrow marker definition -->
+                  <defs>
+                    <marker
+                      id="arrowhead"
+                      markerWidth="10"
+                      markerHeight="7"
+                      refX="9"
+                      refY="3.5"
+                      orient="auto"
+                    >
+                      <polygon points="0 0, 10 3.5, 0 7" fill="#fff" />
+                    </marker>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+            <div style="flex: 1">
+              <pre
+                data-id="algo-code"
+                style="margin-top: 3rem"
+              ><code class="hljs python" data-trim>
+def diagnostico_dolor_pecho(sintomas):
+  if sintoma_principal == "dolor opresivo":
+    if factores_riesgo_cv >= 2:
+      return "Sospecha Alta SCA -> ECG + Enzimas"
+    else:
+      return "Sospecha Media -> Considerar otras causas"
+  else:
+    return "Evaluar otras etiologías"</code></pre>
+            </div>
+          </div>
+          <aside class="notes">
+            Este es un ejemplo muy básico. Los algoritmos reales son mucho más
+            complejos.
+          </aside>
+        </section>
+
+        <section>
+          <h2>La Clave: El Registro</h2>
+          <div data-auto-animate>
+            <p data-id="quote" style="font-size: 1.2em">
+              "Lo que se escribe..."
+            </p>
+          </div>
+          <div data-auto-animate class="fragment">
+            <p
+              data-id="quote"
+              class="important-phrase"
+              style="
+                border: 2px solid yellow;
+                padding: 10px;
+                display: inline-block;
+              "
+            >
+              "...es lo que cuenta."
+            </p>
+          </div>
+          <aside class="notes">
+            La documentación es la prueba del acto médico.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Auditoría de la Historia Clínica</h2>
+          <p>"La historia clínica será auditada por..."</p>
+          <div data-auto-animate class="audit-icons">
+            <span data-id="auditor1" class="fragment">👨‍⚕️ Médicos</span>
+          </div>
+          <div data-auto-animate class="audit-icons">
+            <span data-id="auditor2" class="fragment"
+              >🧑‍💼 y No Médicos (Administrativos, Aseguradoras, Legales)</span
+            >
+          </div>
+        </section>
+
+        <section data-auto-animate>
+          <h2>Desafíos Actuales</h2>
+          <p>
+            "El tiempo de atención clínica disminuye y las demandas
+            administrativas crecen."
+          </p>
+          <div class="bar-chart-container" data-auto-animate-id="bars">
+            <div
+              class="bar"
+              data-id="bar1"
+              style="height: 180px; background-color: lightcoral"
+            >
+              Atención Clínica (Antes)
+            </div>
+            <div
+              class="bar"
+              data-id="bar2"
+              style="height: 60px; background-color: lightblue"
+            >
+              Admin. (Antes)
+            </div>
+          </div>
+          <aside class="notes">Estado inicial</aside>
+        </section>
+        <section data-auto-animate>
+          <h2>Desafíos Actuales</h2>
+          <p>
+            "El tiempo de atención clínica disminuye y las demandas
+            administrativas crecen."
+          </p>
+          <div class="bar-chart-container" data-auto-animate-id="bars">
+            <div
+              class="bar"
+              data-id="bar1"
+              style="height: 80px; background-color: lightcoral"
+            >
+              Atención Clínica (Ahora)
+            </div>
+            <div
+              class="bar"
+              data-id="bar2"
+              style="height: 160px; background-color: lightblue"
+            >
+              Admin. (Ahora)
+            </div>
+          </div>
+          <p class="small">
+            (AutoAnimate cambia la altura de las barras entre estas dos
+            diapositivas)
+          </p>
+        </section>
+
+        <section>
+          <section>
+            <h2>Propósito de Este Recurso</h2>
+            <p>"Este recurso espera ayudar al médico de atención primaria."</p>
+            <div
+              class="fragment r-frame"
+              style="
+                width: 300px;
+                height: 200px;
+                margin: auto;
+                background-color: #444;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <span style="font-size: 3em">🤝</span>
+            </div>
+            <aside class="notes">
+              Este recurso busca ser una guía rápida y efectiva.
+            </aside>
+          </section>
+          <section>
+            <h2>Consulta Eficiente</h2>
+            <p>
+              "Una consulta rápida pero suficiente para llenar la historia
+              clínica."
+            </p>
+            <ul data-id="checklist" class="checklist r-stretch">
+              <li data-id="item1" class="fragment">Anamnesis dirigida</li>
+              <li data-id="item2" class="fragment">Examen físico enfocado</li>
+              <li data-id="item3" class="fragment">
+                Impresión diagnóstica clara
+              </li>
+              <li data-id="item4" class="fragment">
+                Plan conciso y justificado
+              </li>
+              <li data-id="item5" class="fragment">Registro estructurado</li>
+            </ul>
+            <button onclick="toggleChecklist()" class="fragment">
+              Marcar/Desmarcar Todo
+            </button>
+          </section>
+          <section data-background-size="contain">
+            <h2>Los Fundamentos del Registro</h2>
+            <div data-auto-animate>
+              <h3 data-id="q1" style="color: #ffd700">¿Qué?</h3>
+              <p data-id="a1" class="fragment">
+                Sin ambiguedades, ser especifico. (no: ayuda diagnostica,
+                imagen, laboratorios) (si: uroanalisis, ecografia mamaria)
+              </p>
+            </div>
+            <div data-auto-animate class="fragment">
+              <h3 data-id="q2" style="color: #add8e6">¿Por qué se escribe?</h3>
+              <p data-id="a2" class="fragment">
+                criterios diagnosticos, criterios de inclusion/exclusion,
+                criterios de remision
+              </p>
+            </div>
+            <div data-auto-animate class="fragment">
+              <h3 data-id="q3" style="color: #90ee90">¿Para qué se escribe?</h3>
+              <p data-id="a3" class="fragment">
+                confirmar hallazgos, alcanzar metas de tratamiento, dar
+                pronostico
+              </p>
+            </div>
+          </section>
+        </section>
+
+        <section>
+          <h2>¡Bienvenidos a Bordo!</h2>
+          <p>
+            Esperamos que esta herramienta sea de utilidad en tu práctica
+            diaria.
+          </p>
+          <p class="fragment">
+            El objetivo es optimizar tu tiempo y la calidad de tus registros.
+          </p>
+          <p class="fragment">Explora, aprende y aplica.</p>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/search/search.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/fsfx/fsfx.js"></script>
+    <script src="plugin/menu/menu.js"></script>
+    <script src="plugin/verticator/verticator.js"></script>
+    <script src="plugin/wordcloud/reveal-wordcloud.js"></script>
+    <script src="plugin/wordcloud/wordcloud2/src/wordcloud2.js"></script>
+    <script src="plugin/copycode/copycode.js"></script>
+
+    <script>
+      function toggleChecklist() {
+        document
+          .querySelectorAll("#checklist li")
+          .forEach((li) => li.classList.toggle("checked"));
+      }
+
+      Reveal.initialize({
+        width: "90%",
+        height: "80%",
+        maxScale: 1,
+        minScale: 1,
+        margin: 10,
+        controlsTutorial: true,
+        hash: true,
+        center: true,
+        slideNumber: "h.v",
+        // Parallax background image
+        parallaxBackgroundImage:
+          "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg", // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
+
+        // Parallax background size
+        parallaxBackgroundSize: "2100px 900px", // CSS syntax, e.g. "2100px 900px" -
+        fsfx: {
+          baseclass: "fsbutton",
+          hideifnofs: true,
+          nofsfxCss: "display: none;",
+          compatibility: false,
+          auto: {
+            generate: true,
+            color: "var(--r-main-color)",
+            oppositecolor: "black",
+            position: {
+              right: "20px",
+              top: "20px",
+            },
+          },
+          debugfsdisabled: false,
+        },
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom,
+          CopyCode,
+          FsFx,
+          RevealMenu,
+          Verticator,
+        ],
+        dependencies: [
+          {
+            src: "plugin/wordcloud/reveal-wordcloud.js",
+            condition: function () {
+              return !!document.querySelector("[wordcloud]");
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>

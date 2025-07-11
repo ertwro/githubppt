@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" />
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <pre><code data-line-numbers="3,8-10">
+<table>
+  <tr>
+    <td>Apples</td>
+    <td>$1</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>Oranges</td>
+    <td>$2</td>
+    <td>18</td>
+  </tr>
+</table>
+</code></pre>
+        </section>
+        <section>Slide 2</section>
+        <section data-auto-animate>
+          <ul>
+            <li>Mercury</li>
+            <li>Jupiter</li>
+            <li>Mars</li>
+          </ul>
+        </section>
+        <section data-auto-animate>
+          <ul>
+            <li>Mercury</li>
+            <li>Earth</li>
+            <li>Jupiter</li>
+            <li>Saturn</li>
+            <li>Mars</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="dist/reveal.js"></script>
+    <script>
+      Reveal.initialize({
+        plugins: [RevealHighlight],
+      });
+    </script>
+  </body>
+</html>
